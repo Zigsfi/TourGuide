@@ -25,9 +25,9 @@ typedef enum {
 
 @interface PTDBeanDetailController () <PTDBeanManagerDelegate, PTDBeanDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *connectButton;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *pendingBeanConfigParams;
 @property (nonatomic, assign) BOOL beanConfigUpdatePending;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @end
 
@@ -51,7 +51,6 @@ typedef enum {
         self.connectButton.title = @"Disconnect";
         self.connectButton.enabled = YES;
     }
-    [self.tableView reloadData];
 }
 
 #pragma mark - BeanManagerDelegate Callbacks
@@ -93,9 +92,9 @@ typedef enum {
 }
 -(void)bean:(PTDBean*)device serialDataReceived:(NSData *)data {
     NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    float i = [str floatValue];
-    if (i < 2000) {
-        float dist = i * 340.0 / 2 / 1e6;
+    float echoTime = [str floatValue];
+    float dist = echoTime * 340.0 / 2 / 1e6;
+    if (echoTime < 2000) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Be Careful" message:[NSString stringWithFormat:@"Obstacle within %f meters.", dist] preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
@@ -103,7 +102,8 @@ typedef enum {
         
         [self presentViewController:alertController animated:YES completion:nil];
     }
-    NSLog(@"%f", i);
+    self.distanceLabel.text = [NSString stringWithFormat:@"%f meters",dist];
+    NSLog(@"%f", echoTime);
     
 }
 -(void)bean:(PTDBean*)bean didUpdateAccelerationAxes:(PTDAcceleration)acceleration {
@@ -165,7 +165,6 @@ typedef enum {
         self.bean.delegate = self;
         [self.beanManager disconnectBean:self.bean error:nil];
     }
-    [self.tableView reloadData];
 }
 
 #pragma mark UITableViewDataSource
@@ -178,57 +177,6 @@ static NSString *CellIdentifier = @"BeanListCell";
         cell.bean = self.bean;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
-    }
-    else {
-        switch (indexPath.row) {
-            case ActionCellSendSerialString: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Send Serial String";
-                return cell;
-            }
-            case ActionCellWriteBlue: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Send LED Write Blue";
-                return cell;
-            }
-            case ActionCellReadLed: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Send Read LED";
-                return cell;
-            }
-            case ActionCellReadAccel: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Send Read Accelerometer";
-                return cell;
-            }
-            case ActionCellReadConfig: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Read Config";
-                return cell;
-            }
-            case ActionCellWriteConfig: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Write Config";
-                return cell;
-            }
-            case ActionCellReadTemp: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Read Temp";
-                return cell;
-            }
-            case ActionCellSetScratchNumber: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Set Scratch Number";
-                return cell;
-            }
-            case ActionCellGetScratchNumber: {
-                UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-                cell.textLabel.text = @"Get Scratch Number";
-                return cell;
-            }
-            default:
-                break;
-        }
     }
     return nil;
 }
@@ -248,21 +196,13 @@ static NSString *CellIdentifier = @"BeanListCell";
         if (self.bean.state == BeanState_Discovered) {
             return 0;
         }
-        else if (self.bean.state == BeanState_ConnectedAndValidated) {
-            return ActionCellCount;
-        }
         else {
             return 0;
         }
     }
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (section == 0) {
         return @"Bean";
-    }
-    else {
-        return @"Actions";
-    }
 }
 
 #pragma mark UITableViewDelegate

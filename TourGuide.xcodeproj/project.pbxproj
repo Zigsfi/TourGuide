@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B42000E1C8B4AAA006FD708 /* PTDBeanListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B42000D1C8B4AAA006FD708 /* PTDBeanListViewController.m */; };
+		3B4200141C8B4AE7006FD708 /* PTDBeanHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4200131C8B4AE7006FD708 /* PTDBeanHeaderCell.m */; };
+		3B4200171C8B4AF3006FD708 /* PTDBeanDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B4200161C8B4AF3006FD708 /* PTDBeanDetailController.m */; };
 		3B42FFDE1C8B492E006FD708 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42FFDD1C8B492E006FD708 /* AppDelegate.swift */; };
 		3B42FFE01C8B492E006FD708 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42FFDF1C8B492E006FD708 /* ViewController.swift */; };
 		3B42FFE31C8B492E006FD708 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B42FFE11C8B492E006FD708 /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		3B42FFE81C8B492E006FD708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B42FFE61C8B492E006FD708 /* LaunchScreen.storyboard */; };
 		3B42FFF31C8B492E006FD708 /* TourGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42FFF21C8B492E006FD708 /* TourGuideTests.swift */; };
 		3B42FFFE1C8B492E006FD708 /* TourGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B42FFFD1C8B492E006FD708 /* TourGuideUITests.swift */; };
+		8001232799594F0440D33D03 /* libPods-TourGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F193974DF7D34EC223B5F824 /* libPods-TourGuide.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		357FF9992F9F59B933D6C772 /* Pods-TourGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuide/Pods-TourGuide.release.xcconfig"; sourceTree = "<group>"; };
+		3B42000B1C8B4AAA006FD708 /* TourGuide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TourGuide-Bridging-Header.h"; sourceTree = "<group>"; };
+		3B42000C1C8B4AAA006FD708 /* PTDBeanListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBeanListViewController.h; sourceTree = "<group>"; };
+		3B42000D1C8B4AAA006FD708 /* PTDBeanListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBeanListViewController.m; sourceTree = "<group>"; };
+		3B4200121C8B4AE7006FD708 /* PTDBeanHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBeanHeaderCell.h; sourceTree = "<group>"; };
+		3B4200131C8B4AE7006FD708 /* PTDBeanHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBeanHeaderCell.m; sourceTree = "<group>"; };
+		3B4200151C8B4AF3006FD708 /* PTDBeanDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDBeanDetailController.h; sourceTree = "<group>"; };
+		3B4200161C8B4AF3006FD708 /* PTDBeanDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTDBeanDetailController.m; sourceTree = "<group>"; };
 		3B42FFDA1C8B492E006FD708 /* TourGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B42FFDD1C8B492E006FD708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B42FFDF1C8B492E006FD708 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +59,8 @@
 		3B42FFF91C8B492E006FD708 /* TourGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TourGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B42FFFD1C8B492E006FD708 /* TourGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourGuideUITests.swift; sourceTree = "<group>"; };
 		3B42FFFF1C8B492E006FD708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9433ACF16F7FBD8D1E3FB787 /* Pods-TourGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TourGuide/Pods-TourGuide.debug.xcconfig"; sourceTree = "<group>"; };
+		F193974DF7D34EC223B5F824 /* libPods-TourGuide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TourGuide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8001232799594F0440D33D03 /* libPods-TourGuide.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				3B42FFF11C8B492E006FD708 /* TourGuideTests */,
 				3B42FFFC1C8B492E006FD708 /* TourGuideUITests */,
 				3B42FFDB1C8B492E006FD708 /* Products */,
+				EBA03DED7AE0A7278D25010E /* Pods */,
+				D964C9BAE239657292AAA7F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +114,19 @@
 		3B42FFDC1C8B492E006FD708 /* TourGuide */ = {
 			isa = PBXGroup;
 			children = (
+				3B4200121C8B4AE7006FD708 /* PTDBeanHeaderCell.h */,
+				3B4200131C8B4AE7006FD708 /* PTDBeanHeaderCell.m */,
+				3B42000C1C8B4AAA006FD708 /* PTDBeanListViewController.h */,
+				3B42000D1C8B4AAA006FD708 /* PTDBeanListViewController.m */,
+				3B4200151C8B4AF3006FD708 /* PTDBeanDetailController.h */,
+				3B4200161C8B4AF3006FD708 /* PTDBeanDetailController.m */,
 				3B42FFDD1C8B492E006FD708 /* AppDelegate.swift */,
 				3B42FFDF1C8B492E006FD708 /* ViewController.swift */,
 				3B42FFE11C8B492E006FD708 /* Main.storyboard */,
 				3B42FFE41C8B492E006FD708 /* Assets.xcassets */,
 				3B42FFE61C8B492E006FD708 /* LaunchScreen.storyboard */,
 				3B42FFE91C8B492E006FD708 /* Info.plist */,
+				3B42000B1C8B4AAA006FD708 /* TourGuide-Bridging-Header.h */,
 			);
 			path = TourGuide;
 			sourceTree = "<group>";
@@ -125,6 +149,23 @@
 			path = TourGuideUITests;
 			sourceTree = "<group>";
 		};
+		D964C9BAE239657292AAA7F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F193974DF7D34EC223B5F824 /* libPods-TourGuide.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBA03DED7AE0A7278D25010E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9433ACF16F7FBD8D1E3FB787 /* Pods-TourGuide.debug.xcconfig */,
+				357FF9992F9F59B933D6C772 /* Pods-TourGuide.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B4200021C8B492E006FD708 /* Build configuration list for PBXNativeTarget "TourGuide" */;
 			buildPhases = (
+				BC4BE73049AC94A484090DC4 /* Check Pods Manifest.lock */,
 				3B42FFD61C8B492E006FD708 /* Sources */,
 				3B42FFD71C8B492E006FD708 /* Frameworks */,
 				3B42FFD81C8B492E006FD708 /* Resources */,
+				75BFF43A7FF05191D43CEF47 /* Embed Pods Frameworks */,
+				5DA8A527132AB2DA108F66BD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,11 +295,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5DA8A527132AB2DA108F66BD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TourGuide/Pods-TourGuide-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75BFF43A7FF05191D43CEF47 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TourGuide/Pods-TourGuide-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4BE73049AC94A484090DC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B42FFD61C8B492E006FD708 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B42000E1C8B4AAA006FD708 /* PTDBeanListViewController.m in Sources */,
+				3B4200171C8B4AF3006FD708 /* PTDBeanDetailController.m in Sources */,
+				3B4200141C8B4AE7006FD708 /* PTDBeanHeaderCell.m in Sources */,
 				3B42FFE01C8B492E006FD708 /* ViewController.swift in Sources */,
 				3B42FFDE1C8B492E006FD708 /* AppDelegate.swift in Sources */,
 			);
@@ -395,23 +490,30 @@
 		};
 		3B4200031C8B492E006FD708 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9433ACF16F7FBD8D1E3FB787 /* Pods-TourGuide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TourGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zigsfi.TourGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TourGuide/TourGuide-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3B4200041C8B492E006FD708 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 357FF9992F9F59B933D6C772 /* Pods-TourGuide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TourGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zigsfi.TourGuide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TourGuide/TourGuide-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -473,6 +575,7 @@
 				3B4200041C8B492E006FD708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B4200051C8B492E006FD708 /* Build configuration list for PBXNativeTarget "TourGuideTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +584,7 @@
 				3B4200071C8B492E006FD708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B4200081C8B492E006FD708 /* Build configuration list for PBXNativeTarget "TourGuideUITests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +593,7 @@
 				3B42000A1C8B492E006FD708 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3B42FFD51C8B492E006FD708 /* Build configuration list for PBXProject "TourGuide" */ = {
 			isa = XCConfigurationList;
